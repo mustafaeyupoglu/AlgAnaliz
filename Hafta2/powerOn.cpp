@@ -2,19 +2,21 @@
 #include <iostream>
 
 using namespace std;
-
-int power(int a, int b)
+int sayac=0;
+long long power(long long a, long long b)
 {
-    int toplam=1;
+    long long toplam=1;
     for(int i=0;i<b;i++){
         toplam*=a;
+        sayac++;
     }
     return toplam;
 }
 int main(int argc, char *argv[])
 {
-    int sonuc=power(5,2);
-    cout << sonuc;
+    long long sonuc=power(2,60);
+    cout << sonuc<<" "<<sayac;
     system("PAUSE");
     return EXIT_SUCCESS;
 }
+
