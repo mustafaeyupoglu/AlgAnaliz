@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javaapplication3;
+package ortabulvemaxsub.nlogn;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author BM
  */
-public class JavaApplication3 {
+public class ortaBulVeMaxSubn3 {
 
     /**
      * @param args the command line arguments
@@ -30,17 +30,17 @@ public class JavaApplication3 {
             for (int i = dizi.length/2; i < dizi.length; i++) {
                 dizi2.add(dizi[i]);
             }
-            for (int i = 0; i < dizi.length/2; i++) {
-                System.out.println(dizi1.get(i));
-                
-            }   
+//            for (int i = 0; i < dizi.length/2; i++) {
+//                System.out.println(dizi1.get(i));
+//                
+//            }   
         System.out.println("1. DİZİ MAXSUM:"+maxSubSum(dizi1));
-            System.out.println();
-            System.out.println("2.dizi");
-           for (int i = 0; i < dizi.length/2; i++) {
-                System.out.println(dizi2.get(i));
-                
-            } 
+//            System.out.println();
+//            System.out.println("2.dizi");
+//           for (int i = 0; i < dizi.length/2; i++) {
+//                System.out.println(dizi2.get(i));
+//                
+//            } 
            System.out.println("2. DİZİ MAXSUM:"+maxSubSum(dizi2));
         }
         else{
@@ -51,17 +51,17 @@ public class JavaApplication3 {
             for (int i = dizi.length/2; i < dizi.length; i++) {
                 dizi2.add(dizi[i]);
             }
-            for (int i = 0; i < dizi.length/2; i++) {
-                System.out.println(dizi1.get(i));
-                
-            } 
+//            for (int i = 0; i < dizi.length/2; i++) {
+//                System.out.println(dizi1.get(i));
+//                
+//            } 
             System.out.println("1. DİZİ MAXSUM:");
             System.out.println(maxSubSum(dizi1));
-            System.out.println("2.dizi");
-           for (int i = 0; i < dizi.length/2+1; i++) {
-                System.out.println(dizi2.get(i));
-                
-            }   
+//            System.out.println("2.dizi");
+//           for (int i = 0; i < dizi.length/2+1; i++) {
+//                System.out.println(dizi2.get(i));
+//                
+//            }   
                  System.out.println("2. DİZİ MAXSUM:"+maxSubSum(dizi2));
         }
         
@@ -82,13 +82,20 @@ public class JavaApplication3 {
             {
                 maxSum = thisSum;
             }
-    }
-    }
-    return maxSum;
+        }
+        }
+        return maxSum;
   }
     public static void main(String[] args) {
-        int dizi[]={4,-3,2,1,6,-1,-2,4};
-          ortaBul(dizi); 
+        final long startTime = System.currentTimeMillis();
+        int[] dizi = new int[10000];
+        for (int i=0; i<10000; i++){
+        int n = (int)(Math.random()*9 + 1);
+        dizi[i] = n;
+       }
+       ortaBul(dizi); 
+       final long endTime = System.currentTimeMillis();
+        System.out.println("Total execution time: " + (endTime - startTime) );
     }
     
 }
