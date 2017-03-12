@@ -90,7 +90,7 @@ public class ortaBulVeMaxSubn3 {
         final long startTime = System.currentTimeMillis();
         int[] dizi = new int[10000];
         for (int i=0; i<10000; i++){
-        int n = (int)(Math.random()*9 + 1);
+        int n = (int)(Math.random()*65535  - 32768);
         dizi[i] = n;
        }
        ortaBul(dizi); 
