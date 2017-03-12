@@ -85,7 +85,7 @@ public class OrtaBulVeMaxSubNlogn {
     public static void main(String[] args) {
         int[] dizi = new int[1000000];
         for (int i=0; i<1000000; i++){
-        int n = (int)(Math.random()*9 + 1);
+        int n = (int)(Math.random()*65535  - 32768);
         dizi[i] = n;
        }
         
